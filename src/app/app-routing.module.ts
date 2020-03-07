@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./drinks/drink.module').then(m => m.DrinkModule)
   },
   {
+    path: 'sides',
+    loadChildren: () => import('./sides/sides.module').then(m => m.SidesModule)
+  },
+  {
     path: '',
     redirectTo: 'pizza',
     pathMatch: 'full'
