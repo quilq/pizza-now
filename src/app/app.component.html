@@ -1,15 +1,25 @@
-<h1>Welcome to pizza-now</h1>
-<hr>
+<mat-toolbar>
+  <h1>pizza-now</h1>
+</mat-toolbar>
 
-<nav>
-  <button routerLink="./pizza"> pizzas </button>
-  <button routerLink="./drink"> drinks </button>
-  <button routerLink="./sides"> sides </button>
-</nav>
+<mat-card> image </mat-card>
+
+<mat-tab-group>
+  <mat-tab label="pizzas" >
+    <button routerLink="./pizza"> pizzas </button>
+  </mat-tab>
+  <mat-tab label="drinks">
+    <button routerLink="./drink"> drinks </button>
+  </mat-tab>
+  <mat-tab label="sides">
+    <button routerLink="./sides"> sides </button>
+  </mat-tab>
+</mat-tab-group>
 
 <router-outlet></router-outlet>
 
-<hr>
 <footer>
-  <h3>footer</h3>
+  <mat-toolbar>
+    <h3>footer</h3>
+  </mat-toolbar>
 </footer>

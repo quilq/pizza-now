@@ -1,9 +1,7 @@
 <p>pizza-list works!</p>
 
-<ol>
-    <li *ngFor="let pizza of pizzas">
-        <p>{{pizza.type}}</p>
-        <h4>{{pizza.name}}</h4>
-        <p> add to cart </p>
-    </li>
-</ol>
+<mat-card *ngFor="let pizza of pizzas">
+    <p>{{pizza.type}}</p>
+    <h4>{{pizza.name}}</h4>
+    <button mat-raised-button> add to cart </button>
+</mat-card>

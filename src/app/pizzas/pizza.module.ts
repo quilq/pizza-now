@@ -5,7 +5,6 @@ import { PizzaRoutingModule } from './pizza-routing.module';
 import { PizzaListComponent } from './pizza-list/pizza-list.component';
 import { MaterialModule } from '../material/material.module';
 
-
 @NgModule({
   declarations: [PizzaListComponent],
   imports: [

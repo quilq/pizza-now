@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PizzaModule } from './pizzas/pizza.module';
 import { DrinkModule } from './drinks/drink.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
     PizzaModule,
     DrinkModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
