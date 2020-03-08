@@ -1,8 +1,7 @@
-<p>drink-list works!</p>
-
-<ol>
-    <li *ngFor="let drink of drinks">
-        <h4>{{drink.name}}</h4>
-        <p> add to cart </p>
-    </li>
-</ol>
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
+    <mat-card *ngFor="let drink of drinks"  fxFlex="30">
+        <p>{{drink.name}}</p>
+        <h4>{{drink.price}}</h4>
+        <button mat-raised-button> add to cart </button>
+    </mat-card>
+</div>

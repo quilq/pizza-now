@@ -4,22 +4,15 @@
 
 <mat-card> image </mat-card>
 
-<mat-tab-group>
-  <mat-tab label="pizzas" >
-    <button routerLink="./pizza"> pizzas </button>
-  </mat-tab>
-  <mat-tab label="drinks">
-    <button routerLink="./drink"> drinks </button>
-  </mat-tab>
-  <mat-tab label="sides">
-    <button routerLink="./sides"> sides </button>
-  </mat-tab>
-</mat-tab-group>
+<nav mat-tab-nav-bar mat-stretch-tabs>
+  <a mat-tab-link *ngFor="let link of links" [routerLink]="['./', link]" (click)="activeLink = link"
+    [active]="activeLink == link">
+    {{link}}
+  </a>
+</nav>
 
 <router-outlet></router-outlet>
 
-<footer>
-  <mat-toolbar>
-    <h3>footer</h3>
-  </mat-toolbar>
-</footer>
+<mat-toolbar>
+  <h3>footer</h3>
+</mat-toolbar>

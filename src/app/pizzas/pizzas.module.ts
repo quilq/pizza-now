@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { PizzaRoutingModule } from './pizza-routing.module';
+import { PizzasRoutingModule } from './pizzas-routing.module';
 import { PizzaListComponent } from './pizza-list/pizza-list.component';
 import { MaterialModule } from '../material/material.module';
 
@@ -9,8 +10,9 @@ import { MaterialModule } from '../material/material.module';
   declarations: [PizzaListComponent],
   imports: [
     CommonModule,
-    PizzaRoutingModule,
-    MaterialModule
+    PizzasRoutingModule,
+    MaterialModule,
+    FlexLayoutModule
   ]
 })
-export class PizzaModule { }
+export class PizzasModule { }

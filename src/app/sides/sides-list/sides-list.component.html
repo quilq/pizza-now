@@ -1,1 +1,7 @@
-<p>sides-list works!</p>
+<div fxLayout="row warp" fxLayoutAlign="space-around center">
+    <mat-card *ngFor="let sides of sidesList"  fxFlex="30">
+        <p>{{sides.name}}</p>
+        <h4>{{sides.price}}</h4>
+        <button mat-raised-button> add to cart </button>
+    </mat-card>
+</div>

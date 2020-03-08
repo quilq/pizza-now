@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { SidesRoutingModule } from './sides-routing.module';
-import { SidesListComponent } from './sides-list/sides-list.component';
+import { DrinksRoutingModule } from './drinks-routing.module';
+import { DrinkListComponent } from './drink-list/drink-list.component';
 import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
-  declarations: [SidesListComponent],
+  declarations: [DrinkListComponent],
   imports: [
     CommonModule,
-    SidesRoutingModule,
+    DrinksRoutingModule,
     MaterialModule,
     FlexLayoutModule
   ]
 })
-export class SidesModule { }
+export class DrinksModule { }

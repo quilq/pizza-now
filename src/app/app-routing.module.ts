@@ -2,15 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-
 const routes: Routes = [
   {
-    path: 'pizza',
-    loadChildren: () => import('./pizzas/pizza.module').then(m => m.PizzaModule)
+    path: 'pizzas',
+    loadChildren: () => import('./pizzas/pizzas.module').then(m => m.PizzasModule)
   },
   {
-    path: 'drink',
-    loadChildren: () => import('./drinks/drink.module').then(m => m.DrinkModule)
+    path: 'drinks',
+    loadChildren: () => import('./drinks/drinks.module').then(m => m.DrinksModule)
   },
   {
     path: 'sides',
