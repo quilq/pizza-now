@@ -1,17 +1,23 @@
-<mat-toolbar>
-  <h1>pizza-now</h1>
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+  <div>pizza-now</div>
+  <nav fxLayout="row" fxLayoutAlign="space-between center">
+    <a routerLink="/user" mat-raised-button> Register | Sign in</a>
+    <a routerLink="/cart" mat-raised-button> Cart </a>
+  </nav>
 </mat-toolbar>
 
 <mat-card> image </mat-card>
 
 <nav mat-tab-nav-bar mat-stretch-tabs>
-  <a mat-tab-link *ngFor="let link of links" [routerLink]="['./', link]" (click)="activeLink = link"
+  <a mat-tab-link *ngFor="let link of links" [routerLink]="['/', link]" (click)="activeLink = link"
     [active]="activeLink == link">
     {{link}}
   </a>
 </nav>
 
-<router-outlet></router-outlet>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
 
 <mat-toolbar>
   <h3>footer</h3>

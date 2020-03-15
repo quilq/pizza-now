@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,16 @@ const routes: Routes = [
     loadChildren: () => import('./sides/sides.module').then(m => m.SidesModule)
   },
   {
-    path: '',
-    redirectTo: 'pizza',
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+  },
+  {
+    path: 'cart',
+    component: CartComponent
+  },
+  {
+    path: '',  //default path
+    redirectTo: '/pizzas',  //with leading slash ("/"): absolute route; with "./": relative route
     pathMatch: 'full'
   },
   {

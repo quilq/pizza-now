@@ -1,7 +1,10 @@
-<div fxLayout="row wrap" fxLayoutAlign="space-around center">
-    <mat-card *ngFor="let pizza of pizzas" fxFlex="30">
-        <p>{{pizza.name}}</p>
-        <h4>{{pizza.price}}</h4>
-        <button mat-raised-button> add to cart </button>
-    </mat-card>
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="20px grid">
+    <!-- 'grid' wont work with direct children (mat-card) of the flex container => need another 'div' -->
+    <div fxFlex="30" *ngFor="let pizza of pizzas">
+        <mat-card>
+            <p>{{pizza.name}}</p>
+            <h4>{{pizza.price}}</h4>
+            <button mat-raised-button> add to cart </button>
+        </mat-card>
+    </div>
 </div>
